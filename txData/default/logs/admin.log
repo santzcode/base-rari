@@ -1,0 +1,36 @@
+================================================================
+======== txAdmin v8.0.1 atop fxserver 25770 Starting - 14/03/2026 00:08:14
+================================================================
+================================================================
+======== Log Rotated - 14/03/2026 00:08:15                      
+================================================================
+================================================================
+======== txAdmin v8.0.1 atop fxserver 25770 Starting - 14/03/2026 00:08:25
+================================================================
+[00:13:46][Diego_Tostes] logged in from 127.0.0.1 via cfxre
+[00:15:36][Diego_Tostes] [Diego_Tostes] executed "refresh"
+[00:19:56][Diego_Tostes] [Diego_Tostes] executed "ensure cfx-mec"
+[00:21:23][Diego_Tostes] [Diego_Tostes] executed "start cfx-mec"
+================================================================
+======== txAdmin v8.0.1 atop fxserver 25770 Starting - 14/03/2026 00:22:15
+================================================================
+================================================================
+======== txAdmin v8.0.1 atop fxserver 25770 Starting - 14/03/2026 00:31:23
+================================================================
+================================================================
+======== txAdmin v8.0.1 atop fxserver 25770 Starting - 14/03/2026 00:31:59
+================================================================
+[00:38:03][Diego_Tostes] logged in from 127.0.0.1 via cfxre
+================================================================
+======== txAdmin v8.0.1 atop fxserver 25770 Starting - 14/03/2026 16:46:36
+================================================================
+[16:48:39][MONITOR] Restarting server: Resource "RoupasconexaoSP" failed to start within the 1m30s time limit (P:2m1s|HB:--|HC:1s).
+[16:50:40][MONITOR] Restarting server: Resource "RoupasconexaoSP" failed to start within the 1m30s time limit (P:1m55s|HB:--|HC:1s).
+[16:52:41][MONITOR] Restarting server: Resource "RoupasconexaoSP" failed to start within the 1m30s time limit (P:1m54s|HB:--|HC:1s).
+[16:54:41][MONITOR] Restarting server: Resource "RoupasconexaoSP" failed to start within the 1m30s time limit (P:1m54s|HB:--|HC:1s).
+[16:56:42][MONITOR] Restarting server: Resource "RoupasconexaoSP" failed to start within the 1m30s time limit (P:1m54s|HB:--|HC:1s).
+[16:58:43][MONITOR] Restarting server: Resource "RoupasconexaoSP" failed to start within the 1m30s time limit (P:1m56s|HB:--|HC:1s).
+[17:00:44][MONITOR] Restarting server: Resource "RoupasconexaoSP" failed to start within the 1m30s time limit (P:1m54s|HB:--|HC:1s).
+[17:02:45][MONITOR] Restarting server: Resource "RoupasconexaoSP" failed to start within the 1m30s time limit (P:1m56s|HB:--|HC:1s).
+[17:04:48][MONITOR] Restarting server: Resource "RoupasconexaoSP" failed to start within the 1m30s time limit (P:1m57s|HB:--|HC:0s).
+[17:06:49][MONITOR] Restarting server: Resource "RoupasconexaoSP" failed to start within the 1m30s time limit (P:1m55s|HB:--|HC:1s).

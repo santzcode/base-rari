@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #C3C5CC;
+}
+
+
+#root {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -360px;
+    width: 460px;
+    min-height: 600px;
+    border-radius: 4px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    transition: all 0.2s;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#root h1 {
+    color: #ff2a2a;
+    font-size: 1.3rem;
+    font-family: "Poppins";
+    font-weight: 500;
+    line-height: 28px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+#root p {
+    font-family: "Roboto";
+    font-size: 0.85rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 20px; 
+}
+
+#root .container-itens {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 10px;
+    flex: 1 1 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #888888 transparent;
+}
+
+#root .container-itens::-webkit-scrollbar {
+    width: 1px;
+}
+
+#root .container-itens::-webkit-scrollbar-thumb {
+    background-color: #8d0101;
+    border-radius: 5px;
+}
+
+#root .section-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(195, 204, 201, 0.2);
+}
+
+.section-buttons #amount {
+    width: 96px;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid rgba(195, 204, 201, 0.3);
+    background: rgba(30, 30, 30, 0.95);
+    color: #fff;
+    font-family: "Roboto";
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.section-buttons button {
+    color: #fff;
+    padding: 6px;
+    min-width: 92px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+}
+
+.qty-row {
+    display: grid;
+    grid-template-columns: 1fr 72px 72px 92px;
+    gap: 8px;
+}
+
+.qty-row button {
+    min-width: unset;
+}
+
+.action-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+button {
+    border-radius: 4px;
+    border: 1px solid rgba(195, 204, 201, 0.35);
+    background: rgba(255,0,0,0.06);
+    font-family: "Roboto";
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button:hover,.select-button.active {
+    background-color: #ff2a2a !important;
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 220px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(18, 18, 18, 0.85);
+    padding: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+.item h3 {
+    color: rgba(255, 42, 42, 0.9);
+    font-family: "Poppins";
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 14px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.container-img {
+    max-width: 100px;
+    height: 105px;
+    align-self: center;
+    background: rgba(255, 0, 0, 0.06);
+    border-radius: 6px;
+}
+
+.item img {
+    display: inline-block;
+    max-width: 90px;
+    margin-bottom: 12px;
+}
+
+.infos-item {
+    list-style: none;
+    font-weight: 700;
+    font-family: "Poppins";
+    text-transform: uppercase;
+    font-size: 10px;
+    margin-bottom: 8px;
+}
+
+.infos-item li > span{
+    color: #ff2a2a;
+    font-weight: 500;
+}
+
+.item button {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.item.selected {
+    border: 1px solid rgba(255, 42, 42, 0.6);
+    box-shadow: 0 0 10px rgba(255, 42, 42, 0.35);
+}

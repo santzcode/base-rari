@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fireworks Sound</title>
+</head>
+<body>
+    <audio id="sound" src="fireworks.mp3" preload="auto"></audio>
+    <script>
+        window.addEventListener('message', function(event) {
+            if (event.data.transactionType === 'playSound') {
+                var audio = document.getElementById('sound');
+                audio.src = event.data.transactionFile;
+                audio.volume = event.data.volume;
+                audio.play();
+            }
+        });
+    </script>
+</body>
+</html>

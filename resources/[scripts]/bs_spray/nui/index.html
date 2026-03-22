@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BS Spray - Graffiti System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="spray-menu" class="menu-container hidden">
+        <div class="menu-backdrop"></div>
+        <div class="menu-panel">
+            <!-- Header -->
+            <div class="menu-header">
+                <h2><i class="fas fa-spray-can"></i> SPRAY CAN</h2>
+                <button id="close-menu" class="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Content -->
+            <div class="menu-content">
+                <!-- Style Selection -->
+                <div class="menu-section">
+                    <label class="section-title">
+                        <i class="fas fa-brush"></i> STYLE FONT
+                    </label>
+                    <select id="font-selector" class="modern-select">
+                        <option value="1">ESTRELAS</option>
+                        <option value="2">BARRAB</option>
+                        <option value="3">BLONDI</option>
+                        <option value="4">BLUBE</option>
+                        <option value="5">DOVE</option>
+                    </select>
+                </div>
+
+                <!-- Color Selection -->
+                <div class="menu-section">
+                    <label class="section-title">
+                        <i class="fas fa-palette"></i> COLOR SPRAY
+                    </label>
+                    <div class="color-picker-container">
+                        <div id="color-preview" class="color-preview"></div>
+                        <div class="color-grid">
+                            <div class="color-swatch" data-color="1" style="background: #ffffff;"></div>
+                            <div class="color-swatch" data-color="2" style="background: #c81912;"></div>
+                            <div class="color-swatch" data-color="3" style="background: #f64b3c;"></div>
+                            <div class="color-swatch" data-color="4" style="background: #f76a8c;"></div>
+                            <div class="color-swatch" data-color="5" style="background: #fde2e2;"></div>
+                            <div class="color-swatch" data-color="6" style="background: #005082;"></div>
+                            <div class="color-swatch" data-color="7" style="background: #00a8cc;"></div>
+                            <div class="color-swatch" data-color="8" style="background: #ffd31d;"></div>
+                            <div class="color-swatch" data-color="9" style="background: #f5fcc1;"></div>
+                            <div class="color-swatch" data-color="10" style="background: #2b580c;"></div>
+                            <div class="color-swatch" data-color="11" style="background: #844685;"></div>
+                            <div class="color-swatch" data-color="12" style="background: #be79df;"></div>
+                            <div class="color-swatch" data-color="13" style="background: #cccccc;"></div>
+                            <div class="color-swatch" data-color="14" style="background: #323232;"></div>
+                            <div class="color-swatch" data-color="15" style="background: #000000;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Size Selection -->
+                <div class="menu-section">
+                    <label class="section-title">
+                        <i class="fas fa-expand-arrows-alt"></i> SIZE SPRAY
+                    </label>
+                    <div class="size-input-container">
+                        <input type="range" id="size-slider" min="60" max="200" value="100" class="modern-slider">
+                        <div class="size-display">
+                            <span id="size-value">100</span> px
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Preview -->
+                <div class="menu-section">
+                    <label class="section-title">
+                        <i class="fas fa-eye"></i> TEXT PREVIEW
+                    </label>
+                    <div class="text-preview-container">
+                        <div id="text-preview" class="text-preview">GRAFITE</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Actions -->
+            <div class="menu-footer">
+                <button id="start-spray" class="action-btn primary">
+                    <i class="fas fa-spray-can"></i>
+                    <span>START SPRAY</span>
+                </button>
+                <button id="cancel-action" class="action-btn secondary">
+                    <i class="fas fa-ban"></i>
+                    <span>CANCEL</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

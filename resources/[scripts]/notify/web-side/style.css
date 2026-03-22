@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+#notifications-container {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    left: auto;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 350px;
+    z-index: 9999;
+}
+
+.notification {
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(5px);
+    border-radius: 4px;
+    padding: 15px;
+    color: #fff;
+    box-shadow: none;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    position: relative;
+    overflow: hidden;
+    animation: slideIn 0.5s ease-out forwards;
+    border-left: 2px solid transparent;
+}
+
+.notification.outro {
+    animation: slideOut 0.4s ease-in forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(120%);
+        opacity: 0;
+    }
+}
+
+.icon-container {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icon-container svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.message {
+    font-size: 13px;
+    color: #cccccc;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.progress-fill {
+    height: 100%;
+    width: 100%;
+    background: currentColor;
+    transform-origin: left;
+}
+
+/* Types */
+.notification.vermelho { border-left-color: #ff4757; }
+.notification.vermelho .icon-container { color: #ff4757; }
+.notification.vermelho .progress-fill { background-color: #ff4757; }
+
+.notification.verde { border-left-color: #2ed573; }
+.notification.verde .icon-container { color: #2ed573; }
+.notification.verde .progress-fill { background-color: #2ed573; }
+
+.notification.amarelo { border-left-color: #ffa502; }
+.notification.amarelo .icon-container { color: #ffa502; }
+.notification.amarelo .progress-fill { background-color: #ffa502; }
+
+.notification.azul { border-left-color: #1e90ff; }
+.notification.azul .icon-container { color: #1e90ff; }
+.notification.azul .progress-fill { background-color: #1e90ff; }
+
+.notification.police { border-left-color: #3742fa; }
+.notification.police .icon-container { color: #3742fa; }
+.notification.police .progress-fill { background-color: #3742fa; }
+
+.notification.paramedic { border-left-color: #ff6b81; }
+.notification.paramedic .icon-container { color: #ff6b81; }
+.notification.paramedic .progress-fill { background-color: #ff6b81; }
+
+.notification.admin { border-left-color: #a55eea; }
+.notification.admin .icon-container { color: #a55eea; }
+.notification.admin .progress-fill { background-color: #a55eea; }
+
+.notification.sangramento { border-left-color: #d63031; }
+.notification.sangramento .icon-container { color: #d63031; }
+.notification.sangramento .progress-fill { background-color: #d63031; }
+
+.notification.compras { border-left-color: #9b59b6; }
+.notification.compras .icon-container { color: #9b59b6; }
+.notification.compras .progress-fill { background-color: #9b59b6; }
+
+.notification.fome { border-left-color: #e67e22; }
+.notification.fome .icon-container { color: #e67e22; }
+.notification.fome .progress-fill { background-color: #e67e22; }
+
+.notification.sede { border-left-color: #0984e3; }
+.notification.sede .icon-container { color: #0984e3; }
+.notification.sede .progress-fill { background-color: #0984e3; }
+
+/* Default styles for others */
+.notification.default { border-left-color: #ffffff; }
+.notification.default .icon-container { color: #ffffff; }
+.notification.default .progress-fill { background-color: #ffffff; }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bancada</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="root">
+        <h1>Bancada de Drogas</h1>
+        <p>Lista de drogas disponível para venda</p>
+        <div class="container-itens">
+        </div>
+        <div class="section-buttons">
+            <div class="qty-row">
+                <input id="amount" type="number" min="1" placeholder="Quantidade">
+                <button id="amountMinus" class="btn btn-icon">−</button>
+                <button id="amountPlus" class="btn btn-icon">+</button>
+                <button id="amountMax" class="btn">Max</button>
+            </div>
+            <div class="action-row">
+                <button id="add" class="btn btn-primary">Adicionar</button>
+                <button id="remove" class="btn btn-secondary">Remover</button>
+                <button id="startSale" class="btn btn-warning">Iniciar/Desativar Venda</button>
+                <button id="close" class="btn btn-ghost">Fechar</button>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

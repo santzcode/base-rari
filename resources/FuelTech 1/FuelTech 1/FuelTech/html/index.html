@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FuelTech FT600</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="fueltech">
+        <!-- Tela de carregamento inicial -->
+        <div id="loading">
+          <img src="logo.png" alt="FuelTech Logo" id="loading-image">
+        </div>
+        <!-- Sobreposição transparente sobre o visor da FuelTech -->
+        <div id="overlay">
+          <!-- Ícone de Configurações -->
+          <img src="settings.png" alt="Settings Icon" id="settings-icon" onclick="openSettings()">
+      
+          <!-- Janela de Configurações -->
+          <div id="settings-window">
+            <button id="close-settings" onclick="closeSettings()">X</button>
+            <h2>Configurações do Veículo</h2>
+
+            <div class="form-group">
+              <label for="traction-control">Controle de Tração</label>
+              <input type="checkbox" id="traction-control" onchange="toggleTractionControl()">              
+            </div>
+            
+            <div class="form-group">
+              <label for="launch-slider">Arrancada</label>
+              <input type="range" id="launch-slider" min="0" max="100" value="50" onchange="adjustLaunchAndBrake()">
+            </div>
+            <div class="form-group">
+              <label for="brake-slider">Frenagem</label>
+              <input type="range" id="brake-slider" min="0" max="100" value="100" onchange="adjustLaunchAndBrake()">
+            </div>
+            <div class="form-group">
+              <label for="power-slider">Potência do Motor</label>
+              <input type="range" id="power-slider" min="0.5" max="2.0" step="0.1" value="1.0" onchange="adjustPerformance()">
+          </div>
+          <div class="form-group">
+            <label for="suspension-mode">Modo de Suspensão:</label>
+            <div id="suspension-mode" class="btn-group">
+                <button id="racing" class="suspension-btn" onclick="adjustSuspensionMode('racing')">Racing</button>
+                <button id="normal" class="suspension-btn active" onclick="adjustSuspensionMode('normal')">Normal</button>
+                <button id="offroad" class="suspension-btn" onclick="adjustSuspensionMode('offroad')">Offroad</button>
+            </div>
+          </div>
+        
+        
+          <div class="form-group">
+            <label for="rpm-limit" class="rpm-label">Limite de RPM:</label>
+            <div class="rpm-control">
+                <input type="range" id="rpm-limit" min="5000" max="10000" step="500" value="7000" oninput="updateRpmValue(this.value)" onchange="adjustRpmLimit()">
+                <span id="rpm-display">7000 RPM</span>
+            </div>
+        </div>
+        
+                  
+
+          </div>
+          
+          <!-- Medidor de força G (G-Meter) -->
+          <div id="g-meter">
+            <div id="g-center"></div>
+          </div>
+          <!-- Dados principais sobrepostos aos da imagem -->
+          <div id="rpm" class="data">7380</div>
+          <div id="gear" class="data">3</div>
+          <div id="speed" class="data">115</div>
+          <!-- Informações adicionais sobrepostas -->
+          <div id="map" class="small-data">26.0</div>
+          <div id="battery" class="small-data">16.1</div>
+          <div id="tps" class="small-data">50</div>
+          <div id="oil" class="small-data">100</div>
+          <div id="fuel" class="small-data">75</div>
+          <!-- Barras animadas -->
+          <div id="rpm-bar" class="bar"></div>
+          <div id="fuel-bar" class="bar"></div>
+          <div id="oil-bar" class="bar"></div>
+          <div id="tps-bar" class="bar"></div>
+          <!-- Luzes indicadoras ao redor -->
+          <div class="lights">
+            <div class="light green"></div>
+            <div class="light green"></div>
+            <div class="light green"></div>
+            <div class="light green"></div>
+            <div class="light yellow"></div>
+            <div class="light yellow"></div>
+            <div class="light yellow"></div>
+            <div class="light red"></div>
+            <div class="light red"></div>
+            <div class="light red"></div>
+
+            <div class="shift-light" id="shift-light-1"></div>
+            <div class="shift-light" id="shift-light-2"></div>
+            <div class="shift-light" id="shift-light-3"></div>
+            <div class="shift-light" id="shift-light-4"></div>
+          </div>
+        </div>
+      </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

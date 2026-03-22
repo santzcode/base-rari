@@ -1,0 +1,20 @@
+seu inventorio server item.lua 
+
+------------------------------ camera bodycam
+        ["bodycam"] = function(source,Passport,Amount,Slot,Full,Item,Split)
+            TriggerClientEvent("alc:camtoggle", source, "bodycam")
+            return
+        end,
+
+
+
+-- sou vrp cfg  item.lua
+
+["bodycam"] = {
+        ["Index"] = "bodycam",
+        ["Name"] = "Camera Corporal",
+        ["Description"] = "Camera Corporal para Policia",
+        ["Type"] = "Usável",
+        ["Weight"] = 0.5,
+        ["Economy"] = 500
+    },

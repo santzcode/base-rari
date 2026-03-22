@@ -1,0 +1,27 @@
+[ ANIMAÇÕES ]
+
+dic: anim@male@holding_radio
+name: holding_radio_clip
+
+[ DEVE SER COLOCADO FORA DO "REGISTERCOMMAND" ]
+
+local radioProp
+
+[ CRIAR RÁDIO ]
+
+radioProp = CreateObject(`prop_cs_hand_radio`, 1.0, 1.0, 1.0, 1, 1, 0)
+AttachEntityToEntity(radioProp, PlayerPedId(), GetPedBoneIndex(PlayerPedId(), 28422), 0.0750, 0.0230, -0.0230, -90.0000, 0.0, -59.9999, 1, 0, 0, 0, 2, 1)
+
+[ DELETAR RÁDIO ]
+
+DeleteObject(radioProp)
+
+[ EXEMPLO DE COMO SEU CÓDIGO DEVE ESTAR PARA CRIAR O RÁDIO NA BOCA ]
+
+if LoadAnim("anim@male@holding_radio") then
+    TaskPlayAnim(Ped,"anim@male@holding_radio","holding_radio_clip",8.0,8.0,-1,49,1,0,0,0)
+    local coords = GetOffsetFromEntityInWorldCoords(PlayerPedId(),0.0,0.0,-5.0)
+    object = CreateObject(GetHashKey('prop_cs_hand_radio'),coords["x"],coords["y"],coords["z"],false,false,false)
+    SetEntityCollision(object,false,false)
+    AttachEntityToEntity(object,PlayerPedId(),GetPedBoneIndex(PlayerPedId(),28422),0.0750, 0.0230, -0.0230, -90.0000, 0.0, -59.9999,false,false,false,false,2,true)
+end

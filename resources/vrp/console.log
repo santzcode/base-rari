@@ -1,0 +1,25 @@
+[      script:oxmysql] [12.1.2-MariaDB] Database server connection established!
+[ script:five_orgs_v2] [FIVE_ORGS_V2] Metas semanais resetadas da última semana: 0.
+[   script:smartphone] [SMARTPHONE] Authorized!
+[ script:five_orgs_v2] [FIVE_ORGS_V2] Iniciando Cache dos jogadores.
+[ script:five_orgs_v2] [FIVE_ORGS_V2] Cache dos jogadores gerados com sucesso tempo 0 segundo(s).
+[ citizen-server-impl]         fff
+[ citizen-server-impl]   cccc ff   xx  xx     rr rr    eee
+[ citizen-server-impl] cc     ffff   xx       rrr  r ee   e
+[ citizen-server-impl] cc     ff     xx   ... rr     eeeee
+[ citizen-server-impl]  ccccc ff   xx  xx ... rr      eeeee
+[ citizen-server-impl]
+[ citizen-server-impl] Authenticated with cfx.re Nucleus: https://snake-resources-amo9b3.users.cfx.re/
+[ citizen-server-impl] server thread hitch warning: timer interval of 263 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 229 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 570 milliseconds
+cfx> [          script:vrp] SCRIPT ERROR: [string "vrp/lib/Proxy.lua"]:50:
+[          script:vrp]  An error occurred while calling export `query_async` in resource `oxmysql`:
+[          script:vrp]   citizen:/scripting/lua/scheduler.lua:739: vrp was unable to execute a query!
+[          script:vrp]   Query: INSERT INTO characters(license,name,name2,sex,phone,blood,created, time) VALUES(?,?,?,?,?,?,UNIX_TIMESTAMP() + 259200, ?)
+[          script:vrp]   ["ecbdd433091c8daf35bf85160fba86fad0e8f758","RC","DEX","M","403-034",2,null]
+[          script:vrp]  ---
+[          script:vrp] > handler (rp/lib/Proxy.lua:50)
+[          script:vrp] > processTicksAndRejections (node:internal/process/task_queues:96)
+[      script:oxmysql] [12.1.2-MariaDB] vrp took 148.2110ms to execute a query!
+[      script:oxmysql] UPDATE five_orgs_info SET bank = ?, bank_historic = ? WHERE organization = ? [2995000,"[{\"date\":\"29/01/2026 17:54:34\",\"name\":\"Paramedic\",\"value\":5000,\"type\":\"SALÁRIO FAC\"},{\"date\":\"29/01/2026 18:04:34\",\"name\":\"Paramedic\",\"value\":5000,\"type\":\"SALÁRIO FAC\"},{\"date\":\"29/01/2026 18:14:34\",\"name\":\"Paramedic\",\"value\":5000,\"type\":\"SALÁRIO FAC\"},{\"date\":\"29/01/2026 18:33:52\",\"name\":\"Paramedic\",\"value\":5000,\"type\":\"SALÁRIO FAC\"},{\"date\":\"29/01/2026 18:43:53\",\"name\":\"Paramedic\",\"value\":5000,\"type\":\"SALÁRIO FAC\"},{\"date\":\"29/01/2026 18:53:53\",\"name\":\"Paramedic\",\"value\":5000,\"type\":\"SALÁRIO FAC\"},{\"date\":\"29/01/2026 19:03:53\",\"name\":\"Paramedic\",\"value\":5000,\"type\":\"SALÁRIO FAC\"},{\"date\":\"05/02/2026 15:02:32\",\"name\":\"Paramedic\",\"value\":5000,\"type\":\"SALÁRIO FAC\"},{\"date\":\"05/02/2026 15:26:16\",\"name\":\"Paramedic\",\"value\":5000,\"type\":\"SALÁRIO FAC\"},{\"date\":\"05/02/2026 15:38:41\",\"name\":\"Paramedic\",\"value\":5000,\"type\":\"SALÁRIO FAC\"},{\"date\":\"05/02/2026 15:48:41\",\"name\":\"Paramedic\",\"value\":5000,\"type\":\"SALÁRIO FAC\"},{\"date\":\"05/02/2026 16:09:53\",\"name\":\"Paramedic\",\"value\":5000,\"type\":\"SALÁRIO FAC\"},{\"date\":\"05/02/2026 16:19:53\",\"name\":\"Paramedic\",\"value\":5000,\"type\":\"SALÁRIO FAC\"},{\"date\":\"05/02/2026 16:29:53\",\"name\":\"Paramedic\",\"value\":5000,\"type\":\"SALÁRIO FAC\"},{\"date\":\"05/02/2026 16:51:04\",\"name\":\"Paramedic\",\"value\":5000,\"type\":\"SALÁRIO FAC\"},{\"date\":\"05/02/2026 17:01:04\",\"name\":\"Paramedic\",\"value\":5000,\"type\":\"SALÁRIO FAC\"},{\"date\":\"05/02/2026 18:54:54\",\"name\":\"Paramedic\",\"value\":5000,\"type\":\"SALÁRIO FAC\"},{\"date\":\"05/02/2026 19:04:54\",\"name\":\"Paramedic\",\"value\":5000,\"type\":\"SALÁRIO FAC\"},{\"date\":\"05/02/2026 19:14:54\",\"name\":\"Paramedic\",\"value\":5000,\"type\":\"SALÁRIO FAC\"},{\"date\":\"05/02/2026 19:24:55\",\"name\":\"Paramedic\",\"value\":5000,\"type\":\"SALÁRIO FAC\"},{\"date\":\"05/02/2026 19:34:55\",\"name\":\"Paramedic\",\"value\":5000,\"type\":\"SALÁRIO FAC\"}]","Paramedic"]

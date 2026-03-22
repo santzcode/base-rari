@@ -1,0 +1,79 @@
+@font-face { font-family: thin; src: url("fonts/thin.ttf") format("truetype"); }
+@font-face { font-family: regular; src: url("fonts/regular.ttf") format("truetype"); }
+@font-face { font-family: bold; src: url("fonts/bold.ttf") format("truetype"); }
+img { pointer-events: none; }
+::-webkit-scrollbar { border-radius: 0.15vw; width: 0.18vw; }
+::-webkit-scrollbar-track { box-shadow: transparent 0px 0px 1vw 1vw inset; border-top: 0.4vw solid transparent; border-right: 0.4vw solid transparent; border-bottom: 0.4vw solid transparent; border-image: initial; border-left: none; }
+::-webkit-scrollbar-thumb { background-color: rgb(87, 99, 208); }
+::-webkit-scrollbar-button { display: none; border-radius: 1vw; }
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { appearance: none; margin: 0px; }
+input[type="number"]::-webkit-inner-spin-button { display: none; }
+body { user-select: none; font-family: regular; font-weight: 700; color: white; position: absolute; top: 0px; left: 0px; margin: 0px; width: 100vw; height: 100vh; background: none center center / cover; overflow: hidden; }
+#laundry { position: absolute; top: 50%; transform: translateY(-50%); left: 5vw; animation: 0.3s ease 0s 1 normal none running slideFromLeft; }
+@keyframes slideFromLeft { 
+  0% { left: -50vw; opacity: 0; }
+  100% { left: 5vw; opacity: 1; }
+}
+@keyframes slideToLeft { 
+  0% { left: 5vw; opacity: 1; }
+  100% { left: -50vw; opacity: 0; }
+}
+.title { font-size: 1vw; font-family: bold; letter-spacing: 0.05vw; text-shadow: rgba(255, 255, 255, 0.3) 0px 0px 0.3vw; display: flex; flex-direction: row; align-items: center; margin-bottom: 0.5vw; }
+.title span { color: gainsboro; font-family: thin; letter-spacing: 0.2vw; font-size: 0.7vw; text-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0.3vw; margin-left: auto; }
+.title .icon { margin-right: 0.5vw; position: relative; width: 2vw; height: 2vw; background-color: rgb(87, 99, 208); border-radius: 2px; }
+.title .icon img { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80%; height: 80%; }
+.container {background: linear-gradient(to top, rgba(87, 99, 208, 0.176) 0%, transparent 95%) rgb(30, 30, 30);width: 20vw;border-radius: 0.5vw;padding: 1vw;border-right-width: 0.15vw;border-bottom-width: 0.15vw;border-left-width: 0.15vw;border-style: none solid solid;border-top-width: initial;border-top-color: initial;border-image: linear-gradient(to top, rgb(0 0 0), transparent) 1 / 1 / 0 stretch;}
+.spacer { width: 100%; border-bottom-width: 0.15vw; margin: 1vw 0px; border-style: none none solid; border-top-width: initial; border-top-color: initial; border-left-width: initial; border-left-color: initial; border-right-width: initial; border-right-color: initial; border-image: linear-gradient(to left, transparent, rgb(87, 99, 208), transparent) 1 / 1 / 0 stretch; }
+.fuel { display: flex; flex-direction: column; border-radius: 0.2vw; }
+.fuel .key {position: relative;background: linear-gradient(to right, #1e1e1e80, transparent);height: 1.6vw;font-family: thin;letter-spacing: 0.2vw;font-size: 0.65vw;border-radius: 0.15vw;padding: 0px 0.5vw;color: gainsboro;display: flex;flex-direction: row;align-items: center;}
+.fuel .key span { font-family: bold; color: white; letter-spacing: 0.1vw; margin-left: 0.5vw; font-size: 0.75vw; }
+.fuel .key .button { position: absolute; top: 50%; transform: translateY(-50%); right: 0px; height: 1.7vw; width: 1.7vw; background-color: rgb(87, 99, 208); border-radius: 0.2vw; cursor: pointer; }
+.fuel .key .button img { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80%; height: 80%; }
+.inputs {padding: 0.5vw;background-color: #1e1e1e80;display: flex;flex-direction: row;align-items: center;justify-content: space-between;border-radius: 0.2vw;}
+.inputs input {width: calc(60% - 1vw);border: none;outline: none;height: 2vw;border-radius: 0.2vw;background-color: rgb(72 72 72 / 50%);text-align: center;padding: 0px 0.5vw;color: white;font-size: 0.8vw;font-family: regular;}
+.inputs .add-button { margin-left: 0.5vw; width: 38%; height: 2vw; background-color: rgb(87, 99, 208); color: white; font-family: bold; font-size: 0.8vw; text-align: center; letter-spacing: 0.05vw; line-height: 2vw; border-radius: 0.2vw; cursor: pointer; }
+.slot {margin: 0.5vw 0px;background: linear-gradient(to top, #1e1e1e80, transparent);border-radius: 0.2vw;padding: 0.5vw;}
+.slot .status { display: flex; flex-direction: row; align-items: center; justify-content: space-between; margin-bottom: 0.5vw; padding-bottom: 0.5vw; border-bottom: 0.12vw solid rgba(255, 255, 255, 0.2); }
+.slot .status.no-border { margin-top: 0.5vw; margin-bottom: 0.5vw; padding-bottom: 0px; border-bottom: none; }
+.slot .status .value { font-family: bold; font-size: 0.7vw; letter-spacing: 0.05vw; }
+.slot .status .key { color: gainsboro; font-family: thin; font-size: 0.7vw; letter-spacing: 0.1vw; }
+.slot .progress-bar { width: 100%; height: 0.3vw; background-color: rgba(0, 0, 0, 0.5); border-radius: 0.15vw; }
+.slot .progress-bar .bar { width: 25%; height: 0.3vw; background-color: rgb(87, 99, 208); border-radius: 0.15vw; transition: all 1s ease 0s; }
+.slot .buttons { margin-top: 1vw; display: flex; flex-direction: row; align-items: center; justify-content: space-between; }
+.slot .buttons .button {width: calc(50% - 0.25vw);background-color: #464646;height: 1.6vw;display: flex;align-items: center;justify-content: center;font-size: 0.7vw;font-family: bold;letter-spacing: 0.1vw;border-radius: 0.2vw;cursor: pointer;}
+.slot .buttons .button.available {background-color: rgb(87, 99, 208);color: #e7e7e7;}
+.widgets { display: flex; flex-direction: column; border-radius: 0.2vw; }
+.widgets .widget {padding: 0.5vw;background: linear-gradient(#1e1e1e80, transparent);border-radius: 0.2vw;}
+.widgets .widget.margin { margin-top: 0.5vw; }
+.widgets .widget .name { width: 100%; font-size: 0.7vw; font-family: bold; letter-spacing: 0.1vw; text-align: center; display: flex; flex-direction: row; align-items: center; justify-content: space-between; }
+.widgets .widget .name .info { position: relative; width: 1vw; height: 1vw; }
+.widgets .widget .name .info .description { visibility: hidden; position: absolute; width: 12vw; right: -13vw; top: 0px; background-color: rgb(0, 0, 0); font-family: thin; letter-spacing: 0.1vw; font-size: 0.6vw; padding: 0.2vw; border-radius: 0.15vw; }
+.widgets .widget .name .info:hover .description { visibility: visible; }
+.widgets .widget .name .info img { width: 1vw; height: 1vw; filter: invert(1); }
+.widgets .widget .level { border-top: 0.12vw solid rgba(255, 255, 255, 0.2); margin-top: 0.8vw; padding-top: 0.8vw; display: flex; flex-direction: row; justify-content: space-between; align-items: center; }
+.widgets .widget .level .bars { display: flex; flex-direction: row; justify-content: space-between; align-items: center; width: calc(100% - 2vw); }
+.widgets .widget .level .bars .bar { height: 0.76vw; width: calc(20% - 0.25vw); background-color: rgba(0, 0, 0, 0.7); border-radius: 0.2vw; }
+.widgets .widget .level .bars .bar.active { background-color: rgb(87, 99, 208); }
+.widgets .widget .level .upgrade { position: relative; width: 1.4vw; height: 1.4vw; background-color: rgb(87, 99, 208); border-radius: 0.2vw; cursor: pointer; }
+.widgets .widget .level .upgrade.max-level { background-color: rgba(173, 173, 173, 0.59); cursor: not-allowed; pointer-events: none; }
+.widgets .widget .level .upgrade img { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60%; height: 60%; }
+#v-modals { color: white; position: absolute; z-index: 10; }
+.modal { max-width: 16vw; padding: 1vw; background: radial-gradient(circle, rgba(73, 73, 73, 0.69) 0%, rgba(31, 31, 31, 0.8) 80%); border-radius: 0.15vw; border: 0.15vw solid rgb(97, 97, 97); box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0.5em; text-align: center; }
+.modal-title { text-align: center; letter-spacing: 0.1vw; font-family: bold; text-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0.3em; color: white; }
+.modal-text { font-family: thin; font-size: 0.8vw; margin-top: 0.5vw; color: gainsboro; text-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0.3em; }
+.modal-text b { color: rgb(87, 99, 208); font-family: bold; }
+.modal .buttons { margin-top: 1vw; display: flex; justify-content: space-between; }
+.modal .buttons .button { width: calc(50% - 0.5vw); padding: 0.15vw 0px; cursor: pointer; border-radius: 0.15vw; height: 1.6vw; background-color: rgb(105, 105, 105); text-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0.3em; transition: all 0.25s ease-in-out 0s; line-height: 1.6vw; font-size: 0.7vw; text-transform: uppercase; font-family: bold; letter-spacing: 0.1vw; }
+.modal .buttons .button.confirm { background-color: rgb(87, 99, 208); color: rgb(0, 0, 0); }
+.modal .buttons .button.cancel { background-color: rgb(105, 105, 105); }
+.modal input { margin-top: 0.5vw; border: none; outline: none; height: 1.8vw; line-height: 1.4vw; border-radius: 0.15vw; width: 50%; text-align: center; font-family: bold; font-size: 1vw; color: white; background-color: rgba(220, 220, 220, 0.2); }
+@keyframes scaleIn { 
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.scaleIn { animation: 0.5s ease 0s 1 normal none running scaleIn; }
+@keyframes scaleOut { 
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(0); opacity: 0; }
+}
+.scaleOut { animation: 0.5s ease 0s 1 normal none running scaleOut; }

@@ -1,0 +1,512 @@
+@font-face {
+  font-family: 'Digital-7';
+  src: url('https://fonts.cdnfonts.com/s/14856/Digital7-4YDR.woff') format('woff');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+  cursor: none; /* Oculta o cursor por padrão */
+}
+
+/* Tela de carregamento */
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#loading-image {
+  background: url('loading.png') no-repeat center center;
+  width: 200px;
+  height: 200px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Painel FuelTech - Inicialmente oculto */
+#fueltech {
+  background: url('fueltech_ft600.png') no-repeat center center;
+  background-size: cover;
+  width: 450px;
+  height: 280px;
+  position: absolute;
+  right: 10px;
+  bottom: 300px;
+  display: none; /* Oculto inicialmente */
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Sobreposição transparente ajustada ao visor da FuelTech */
+#overlay {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  right: 15px;
+  bottom: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Estilo para os dados principais (RPM, Velocidade, etc) */
+.data {
+  position: absolute;
+  font-size: 20px;
+  color: white;
+  font-family: 'Digital-7', sans-serif;
+}
+
+/* Estilo para Gear com fonte maior */
+#gear {
+  position: absolute;
+  font-size: 80px;
+  color: white;
+  font-family: 'Digital-7', sans-serif;
+  letter-spacing: 1px;
+  top: 95px;
+  left: 190px;
+}
+
+/* Estilo para os dados menores (MAP, Bateria, TPS, Óleo, Combustível) */
+.small-data {
+  position: absolute;
+  font-size: 20px;
+  color: white;
+  font-family: 'Digital-7', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Barras animadas */
+.bar {
+  position: absolute;
+  height: 10px;
+  background-color: limegreen;
+  transition: width 0.5s ease, height 0.5s ease;
+  border-radius: 5px;
+}
+
+/* Barra de RPM */
+#rpm-bar {
+  top: 72px;
+  left: 55px;
+  width: 0;
+  background-color: red;
+  max-width: 300px;
+}
+
+/* Barra de combustível */
+#fuel-bar {
+  top: 225px;
+  left: 316px;
+  height: 0;
+  width: 10px;
+  background-color: rgba(189, 134, 33, 0.815);
+  max-height: 50px;
+  transition: height 0.5s ease;
+  transform-origin: top;
+  transform: rotate(180deg);
+}
+
+/* Barra de óleo */
+#oil-bar {
+  top: 225px;
+  left: 265px;
+  height: 0;
+  width: 10px;
+  background-color: rgba(201, 201, 28, 0.842);
+  max-height: 50px;
+  transition: height 0.5s ease;
+  transform-origin: top;
+  transform: rotate(180deg);
+}
+
+/* Barra de TPS */
+#tps-bar {
+  top: 205px;
+  left: 160px;
+  width: 0;
+  max-width: 80px;
+  background-color: green;
+}
+
+/* Luzes ao redor do painel */
+.lights {
+  position: absolute;
+  top: 17px;
+  left: 45px;
+  display: flex;
+  justify-content: space-around;
+  width: 330px;
+}
+
+.light {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: gray;
+  transition: background-color 0.5s ease;
+}
+
+.light.green.active {
+  background-color: green;
+}
+
+.light.yellow.active {
+  background-color: yellow;
+}
+
+.light.red.active {
+  background-color: red;
+}
+
+/* Posicionamento dos dados */
+#rpm {
+  top: 45px;
+  left: 65px;
+}
+
+#speed {
+  top: 105px;
+  left: 300px;
+  font-size: 40px; 
+}
+
+#map {
+  top: 205px;
+  left: 70px;
+}
+
+#battery {
+  top: 205px;
+  left: 120px;
+}
+
+#tps {
+  display: none;
+  top: 245px;
+  left: 320px;
+}
+
+#oil {
+  display: none;
+  top: 225px;
+  left: 265px;
+}
+
+#fuel {
+  display: none;
+  top: 225px;
+  left: 316px;
+}
+
+
+/* Estilos para o G-Meter (força G) */
+#g-meter {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border: 2px solid rgb(167, 153, 153);
+  border-radius: 50%;
+  top: 143px;
+  left: 103px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#g-center {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(172, 28, 28, 0.932);
+  border-radius: 50%;
+}
+
+/* Ícone de Configurações */
+#settings-icon {
+  position: absolute;
+  top: 43px;
+  left: 335px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 10000; /* Acima de todos os outros elementos */
+}
+
+/* Ajuste para a janela de configurações com barra de rolagem */
+#settings-window {
+  position: fixed;
+  bottom: 340px;
+  right: 80px;
+  width: 300px; /* Caixa um pouco menor */
+  height: 170px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  border-radius: 10px;
+  display: none; /* Inicialmente oculta */
+  z-index: 10001;
+  padding: 10px; /* Menor padding para economizar espaço */
+  overflow-y: auto; /* Permite rolagem se o conteúdo exceder a altura */
+  max-height: 300px;
+}
+
+/* Estiliza rótulos e inputs para ficarem lado a lado */
+.form-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+#settings-window label {
+  font-size: 12px;
+  color: #f0f0f0;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+/* Estilo para o campo de limite de RPM e relação de marcha com tamanho menor */
+#settings-window input[type="number"] {
+  width: 70px; /* Largura menor para os inputs */
+  padding: 4px;
+  font-size: 12px;
+  color: #333;
+  background-color: #e6e6e6;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#settings-window input[type="range"] {
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #ddd;
+  border-radius: 5px;
+  height: 4px;
+  cursor: pointer;
+}
+
+#settings-window input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #f39c12;
+  cursor: pointer;
+}
+
+/* Título menor */
+#settings-window h2 {
+  font-size: 14px;
+  color: #f39c12;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Botão de fechar */
+#close-settings {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: rgba(212, 44, 44, 0.918);
+  color: rgb(245, 235, 235);
+  border: none;
+  border-radius: 5px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* Estilização da barra de rolagem */
+#settings-window::-webkit-scrollbar {
+  width: 10px; /* Largura da barra de rolagem */
+}
+
+#settings-window::-webkit-scrollbar-thumb {
+  background-color: rgb(170, 22, 22); /* Cor da barra de rolagem */
+  border-radius: 5px; /* Borda arredondada para um visual mais suave */
+}
+
+#settings-window::-webkit-scrollbar-track {
+  background-color: rgb(87, 53, 53); /* Cor de fundo do track da barra de rolagem */
+}
+/* Ajuste para os botões de suspensão */
+.suspension-btn {
+  background-color: #333; /* Cor de fundo inicial */
+  color: white;
+  border: 1px solid #666;
+  padding: 4px 7px; /* Botões menores */
+  margin: 0 3px; /* Espaçamento entre os botões */
+  font-size: 12px; /* Texto menor */
+  cursor: pointer;
+  border-radius: 3px; /* Bordas arredondadas */
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.suspension-btn:hover {
+  background-color: #555; /* Cor ao passar o mouse */
+}
+
+.suspension-btn.active {
+  background-color: red; /* Botão ativo em vermelho */
+  color: white;
+}
+
+/* Alinha os botões em linha */
+.btn-group {
+  display: flex;
+  justify-content: center; /* Centraliza os botões horizontalmente */
+  align-items: center;
+}
+/* Estilo para o contêiner da interface */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.rpm-label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #f39c12;
+}
+
+.rpm-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilizando o controle deslizante */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 300px;
+  height: 8px;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+input[type="range"]:hover {
+  opacity: 1;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #f39c12;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background-color: #e67e22;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #f39c12;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+input[type="range"]::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #f39c12;
+  cursor: pointer;
+}
+
+/* Exibição do valor de RPM */
+#rpm-display {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #34495e;
+}
+
+
+/* Estilo para Shift Lights */
+.shift-light {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #929292a6; /* Lâmpada apagada com fundo cinza */
+  border: 2px solid #575656; /* Borda escura ao redor */
+  position: absolute;
+  opacity: 0.7; /* Ligeiramente transparente para indicar que está apagada */
+  transition: opacity 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+.shift-light.active {
+  background-color: red; /* Lâmpada acesa quando ativa */
+  opacity: 1; /* Totalmente visível quando ativa */
+  animation: blink 0.5s infinite;
+}
+
+/* Posicionamento das Shift Lights */
+#shift-light-1 {
+  top: 50px;
+  left: -20px;
+}
+
+#shift-light-2 {
+  top: 150px;
+  left: -20px;
+}
+
+#shift-light-3 {
+  top: 50px;
+  right: -20px;
+}
+
+#shift-light-4 {
+  top: 150px;
+  right: -20px;
+}
+
+/* Animação para piscar */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}

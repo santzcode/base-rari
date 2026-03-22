@@ -1,0 +1,24 @@
+	["suspensaoar"] = {
+		["Index"] = "suspensaoar",
+		["Name"] = "suspensao-ar",
+		["Type"] = "Usável",
+		["Weight"] = 2.75,
+		["Economy"] = 625,
+		["Max"] = 10
+	},
+	["moduloneon"] = {
+		["Index"] = "moduloneon",
+		["Name"] = "modulo-neon",
+		["Type"] = "Usável",
+		["Weight"] = 2.75,
+		["Economy"] = 625,
+		["Max"] = 10
+	},
+	["moduloxenon"] = {
+		["Index"] = "moduloxenon",
+		["Name"] = "modulo-xenon",
+		["Type"] = "Usável",
+		["Weight"] = 2.75,
+		["Economy"] = 625,
+		["Max"] = 10
+	},
