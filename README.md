@@ -2,10 +2,10 @@
 
 ## 📜 Scripts (Geral)
 
-- [ ] Ajustar Target
-- [ ] Implementar TrunkChest (não disponível atualmente)
+- [✔️] Ajustar Target
+- [✔️] Implementar TrunkChest (não disponível atualmente)
 
-- [ ] Criar NPC Cagueta
+- [🚧] Criar NPC Cagueta
   - [ ] NPCs estáticos em posições estratégicas
   - [ ] Detectam venda de drogas
   - [ ] Avisam PM
