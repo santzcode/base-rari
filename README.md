@@ -6,7 +6,7 @@
 - [✔️] Implementar TrunkChest (não disponível atualmente)
 
 - [🚧] Criar NPC Cagueta
-  - [ ] NPCs estáticos em posições estratégicas
+  - [ ✔️ ] NPCs estáticos em posições estratégicas
   - [ ] Detectam venda de drogas
   - [ ] Avisam PM
   - [ ] Criar perímetro de detecção
