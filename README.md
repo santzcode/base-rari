@@ -48,27 +48,27 @@
 
 ## Uniformes por patente
 
-- [ ] Criar script com roupas automáticas por patente
+- [ ✔️] Criar script com roupas automáticas por patente
 
 ## Armamento permitido
 
 Manter:
 
-- [ ] Glock
-- [ ] Calibre 12
-- [ ] Fuzil 5.56 (Parafal)
+- [ ✔️] Glock
+- [✔️ ] Calibre 12
+- [✔️ ] Fuzil 5.56 (Parafal)
 
 Remover:
 
-- [ ] Demais armas policiais
+- [✔️ ] Demais armas policiais
 
 ## Itens não letais
 
 Adicionar:
 
-- [ ] Gás de pimenta
-- [ ] Taser
-- [ ] Tonfa
+- [🚧 ] Gás de pimenta
+- [ ✔️] Taser
+- [ 🚧] Tonfa
 
 
 # 🏥 Serviços Legais — Hospital
