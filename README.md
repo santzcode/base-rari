@@ -2,11 +2,11 @@
 
 ## 📜 Scripts (Geral)
 
-- [✔️] Ajustar Target
-- [✔️] Implementar TrunkChest (não disponível atualmente)
+- [x] Ajustar Target
+- [x] Implementar TrunkChest (não disponível atualmente)
 
 - [🚧] Criar NPC Cagueta
-  - [ ✔️ ] NPCs estáticos em posições estratégicas
+  - [x] NPCs estáticos em posições estratégicas
   - [ ] Detectam venda de drogas
   - [ ] Avisam PM
   - [ ] Criar perímetro de detecção
@@ -48,26 +48,26 @@
 
 ## Uniformes por patente
 
-- [ ✔️] Criar script com roupas automáticas por patente
+- [x] Criar script com roupas automáticas por patente
 
 ## Armamento permitido
 
 Manter:
 
-- [ ✔️] Glock
-- [✔️ ] Calibre 12
-- [✔️ ] Fuzil 5.56 (Parafal)
+- [x] Glock
+- [x] Calibre 12
+- [x] Fuzil 5.56 (Parafal)
 
 Remover:
 
-- [✔️ ] Demais armas policiais
+- [x] Demais armas policiais
 
 ## Itens não letais
 
 Adicionar:
 
 - [🚧 ] Gás de pimenta
-- [ ✔️] Taser
+- [x] Taser
 - [ 🚧] Tonfa
 
 
