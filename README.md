@@ -123,10 +123,10 @@ Checklist revisão veicular:
 
 ## Fluxo de prisão RP
 
-- [ ] PM prende suspeito
-- [ ] Leva para Polícia Civil
-- [ ] Registrar boletim
-- [ ] Encaminhar ao presídio
+- [x] PM prende suspeito
+- [x] Leva para Polícia Civil
+- [x] Registrar boletim
+- [x] Encaminhar ao presídio
 
 ## Sistema interno da cadeia
 
@@ -136,9 +136,9 @@ redução fixa = 1 mês
 
 Novo sistema:
 
-- [ ] Alterar redução para valor aleatório
-- [ ] mínimo: 4 meses
-- [ ] máximo: 14 meses
+- [x] Alterar redução para valor aleatório
+- [x] mínimo: 4 meses
+- [x] máximo: 14 meses
 
 
 # 🚗 Sistema Desmanche
