@@ -420,14 +420,17 @@ AddEventHandler("police:Reduce",function(Number)
                 local Random = math.random(#PrisonItens)
                 local Amount = math.random(PrisonItens[Random]["Min"],PrisonItens[Random]["Max"])
                 vRP.GenerateItem(Passport,PrisonItens[Random]["Item"],Amount,true)
-                Prisoners[Passport] = parseInt(Prisoners[Passport] - math.random(2))
+
+                local Reduced = math.random(4,14)
+                Prisoners[Passport] = parseInt(Prisoners[Passport] - Reduced)
+
 				if Prisoners[Passport] <= 0 then
 					TriggerClientEvent("police:Prisioner",vRP.Source(Passport),false)
 					TriggerClientEvent("Notify",vRP.Source(Passport),"azul","Sua sentença terminou, esperamos não ve-lo novamente.",5000,"Sistema Penitenciário")
 					exports.oxmysql:query_async("UPDATE characters SET prison = @prison WHERE id = @Passport",{ Passport = Passport, prison = parseInt(Prisoners[Passport]) })
 					Prisoners[Passport] = nil
 				else
-					TriggerClientEvent("Notify",source,"azul","Sua pena foi reduzida em <b>"..Prisoners[Passport].." Meses</b>.",5000,"Sistema Penitenciário")
+					TriggerClientEvent("Notify",source,"azul","Sua pena foi reduzida em <b>"..Reduced.." Meses</b>.",5000,"Sistema Penitenciário")
 				end
 
                 Player(source)["state"]["Buttons"] = false
