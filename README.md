@@ -24,7 +24,7 @@
   - [ ] Ajustar somente se necessário
 
 - [ ] Ajustar Painel da Polícia
-  - [ ] Corrigir setagens
+  - [x] Corrigir setagens
   - [ ] Integrar painel atual simples
 
 - [🚧] Melhorar Script Bancada (Venda de Drogas)
