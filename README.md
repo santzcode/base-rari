@@ -30,7 +30,7 @@
 - [🚧] Melhorar Script Bancada (Venda de Drogas)
   - [ ] Criar fila de NPC compradores
   - [x] Remover spawn único a cada 10s
-  - [z] Simular comportamento realista
+  - [x] Simular comportamento realista
 
 
 # 🚨 Sistema Ilegal (Favelas / Rotas)
