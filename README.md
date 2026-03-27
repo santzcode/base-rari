@@ -14,9 +14,9 @@
   - [ ] Corrigir erros se necessário
 
 - [ ] Ajustar Painel Organização
-  - [ ] Aba Banco
-  - [ ] Aba Metas
-  - [ ] Aba Baú
+  - [x] Aba Banco
+  - [x] Aba Metas
+  - [x] Aba Baú
 
 - [ ] Converter Painel Craft (VRPex → Creative)
   - [ ] Testar compatibilidade
