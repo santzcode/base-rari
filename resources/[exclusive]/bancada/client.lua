@@ -16,7 +16,7 @@ local drugs = {}
 local tableOpen
 local stopSelling = false
 local trySellExec = false
-local npc
+local npcs = {}
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- FUNÇÕES
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -54,9 +54,13 @@ end)
 
 -- Função para redefinir a venda de drogas
 local function resetSellDrugs()
-    if DoesEntityExist(npc) then
-        DeleteEntity(npc)
+    for k,v in pairs(npcs) do
+        if DoesEntityExist(v) then
+            DeleteEntity(v)
+        end
     end
+
+    npcs = {}
     trySellExec = false
     vendendo = false
     stopSelling = false
@@ -232,3 +236,62 @@ CreateThread(function()
 		SetBlipColour(Blip,config.LocalCoords[Number][3])
 	end
 end)
+
+
+
+
+function spawnBuyerBatch(spawnX,spawnY,spawnZ,mesa)
+    local quantidade = math.random(3,6)
+
+    for i = 1,quantidade do
+        local offsetX = spawnX + math.random(-3,3)
+        local offsetY = spawnY + math.random(-3,3)
+
+        local ped = createNpc(offsetX,offsetY,spawnZ + 1)
+
+        table.insert(npcs,ped)
+
+        CreateThread(function()
+            local coordToGo = GetEntityCoords(mesa.mainObject)
+
+            TaskGoStraightToCoord(ped,coordToGo,1.0,-1,GetEntityHeading(mesa.mainObject),1.0)
+
+            local timeout = 30000
+
+            while #(GetEntityCoords(ped) - coordToGo) > 2 do
+                if timeout <= 0 or stopSelling or IsEntityDead(ped) then
+                    DeleteEntity(ped)
+                    return
+                end
+
+                timeout = timeout - 100
+                Wait(100)
+            end
+
+            local playerPed = PlayerPedId()
+
+            TaskTurnPedToFaceEntity(ped,playerPed,-1)
+            TaskLookAtEntity(ped,playerPed,-1,2048,3)
+
+            Wait(1000)
+
+            if not IsEntityDead(ped) then
+                vSERVER.sellDrug(tableOpen)
+            end
+
+            ClearPedTasks(ped)
+
+            TaskGoToCoordAnyMeans(
+                ped,
+                vec3(spawnX,spawnY,spawnZ),
+                1.0,0,0,786603,0xbf800000
+            )
+
+            Wait(6000)
+
+            if DoesEntityExist(ped) then
+                DeleteEntity(ped)
+            end
+        end)
+    end
+end
