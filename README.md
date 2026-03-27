@@ -8,8 +8,8 @@
 - [🚧] Criar NPC Cagueta
   - [x] NPCs estáticos em posições estratégicas que detectam polícia e disparam rojão 
 
-- [ ] Instalar Painel Admin (base frontal)
-  - [ ] Migrar para base atual
+- [x] Instalar Painel Admin (base frontal)
+  - [x] Migrar para base atual
   - [ ] Testar funcionamento completo
   - [ ] Corrigir erros se necessário
 
