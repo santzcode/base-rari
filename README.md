@@ -6,10 +6,7 @@
 - [x] Implementar TrunkChest (não disponível atualmente)
 
 - [🚧] Criar NPC Cagueta
-  - [x] NPCs estáticos em posições estratégicas
-  - [ ] Detectam venda de drogas
-  - [ ] Avisam PM
-  - [ ] Criar perímetro de detecção
+  - [x] NPCs estáticos em posições estratégicas que detectam polícia e disparam rojão 
 
 - [ ] Instalar Painel Admin (base frontal)
   - [ ] Migrar para base atual
