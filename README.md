@@ -35,10 +35,10 @@
 
 # 🚨 Sistema Ilegal (Favelas / Rotas)
 
-- [ ] Ajustar farme das ~10 favelas
-- [ ] Inserir baús nas favelas
-- [ ] Ajustar rotas de farm
-- [ ] Balancear quantidade coletada por blip
+- [x] Ajustar farme das ~10 favelas
+- [x] Inserir baús nas favelas
+- [x] Ajustar rotas de farm
+- [x] Balancear quantidade coletada por blip
 
 
 # 👮 Serviços Legais — Polícia
