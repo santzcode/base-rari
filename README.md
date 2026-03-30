@@ -10,25 +10,25 @@
 
 - [x] Instalar Painel Admin (base frontal)
   - [x] Migrar para base atual
-  - [ ] Testar funcionamento completo
-  - [ ] Corrigir erros se necessário
+  - [x] Testar funcionamento completo
+  - [x] Corrigir erros se necessário (sem erros aparente)
 
-- [ ] Ajustar Painel Organização
+- [x] Ajustar Painel Organização
   - [x] Aba Banco
   - [x] Aba Metas
-  - [x] Aba Baú
+  - [x] Aba Bau
 
-- [ ] Converter Painel Craft (VRPex → Creative)
-  - [ ] Testar compatibilidade
-  - [ ] Validar funcionamento
-  - [ ] Ajustar somente se necessário
+- x ] Converter Painel Craft (VRPex → Creative)
+  - [x] Testar compatibilidade
+  - [x] Validar funcionamento
+  - [x] Ajustar somente se necessário (testar melhor o funcionamento em produção)
 
-- [ ] Ajustar Painel da Polícia
+- [x] Ajustar Painel da Polícia
   - [x] Corrigir setagens
-  - [ ] Integrar painel atual simples
+  - [ ] Integrar painel atual simples - desnecessário(coloquei um painel somente com setagens e banco da organização)
 
 - [🚧] Melhorar Script Bancada (Venda de Drogas)
-  - [ ] Criar fila de NPC compradores
+  - [x] Criar fila de NPC compradores - nao é bem uma fila, mas aumentei para 3 a 6 npcs.
   - [x] Remover spawn único a cada 10s
   - [x] Simular comportamento realista
 
@@ -63,9 +63,9 @@ Remover:
 
 Adicionar:
 
-- [🚧 ] Gás de pimenta
+- [ ] Gás de pimenta - inviável na framework, irei criar script a parte 
 - [x] Taser
-- [ 🚧] Tonfa
+- [x] Tonfa
 
 
 # 🏥 Serviços Legais — Hospital
@@ -73,13 +73,13 @@ Adicionar:
 ## Sistema Unimed
 
 - [ ] Criar carteirinha Unimed
-- [ ] Tratamento gratuito via maca
-- [ ] Configurar macas vinculadas ao convênio
+- [x] Tratamento gratuito via maca
+- [x] Configurar macas vinculadas ao convênio
 
 ## Sistema SUS
 
-- [ ] Criar item SUS para personagens novos
-- [ ] Criar item SUS para cesárea (gestantes na cidade)
+- [x] Criar item SUS para personagens novos
+- [x] Criar item SUS para cesárea (gestantes na cidade)
 
 ## Hierarquia hospitalar
 
@@ -101,19 +101,19 @@ Pendências:
 
 Checklist revisão veicular:
 
-- [ ] Pneu
-- [ ] Óleo
-- [ ] Correia dentada
-- [ ] Suspensão
+- [x] Pneu
+- [x] Óleo
+- [x] Correia dentada
+- [x] Suspensão
 
 
 # 🚓 Scripts RP Importantes
 
 ## Guincho
 
-- [ ] Criar script guincho mecânicos
-- [ ] Criar script guincho polícia
-- [ ] Integrar com sistema de apreensão
+- [x] Criar script guincho mecânicos
+- [x] Criar script guincho polícia - usam o mesmo sistema
+- [x] Integrar com sistema de apreensão
 
 
 # 🚔 Sistema Prisional
@@ -140,18 +140,18 @@ Novo sistema:
 
 # 🚗 Sistema Desmanche
 
-- [ ] Avaliar 2 scripts disponíveis
-- [ ] Selecionar o mais realista
+- [x] Avaliar 2 scripts disponíveis
+- [x] Selecionar o mais realista
 
 Configurar valores:
 
-- [ ] carro comum
-- [ ] carro VIP
+- [x] carro comum
+- [x] carro VIP
 
 
 # 🛡 Segurança e Infraestrutura
 
-- [ ] Inserir todos manifest na cidade
+- [ ] Inserir todos manifest na cidade - fazer
 - [ ] Criar script segurança cartel
 
 
