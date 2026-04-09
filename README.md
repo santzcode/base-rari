@@ -18,7 +18,7 @@
   - [x] Aba Metas
   - [x] Aba Bau
 
-- x ] Converter Painel Craft (VRPex → Creative)
+- [x] Converter Painel Craft (VRPex → Creative)
   - [x] Testar compatibilidade
   - [x] Validar funcionamento
   - [x] Ajustar somente se necessário (testar melhor o funcionamento em produção)
